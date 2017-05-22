@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Robot Controller</string>
+    <string name="title_dispositivos_pareados">Dispositivos pareados</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
