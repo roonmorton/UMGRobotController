@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private void cargarDispositivos(){
 
         progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Loding");
+        progressDialog.setMessage("Loading");
         progressDialog.show();
         progressDialog.setCancelable(false);
 

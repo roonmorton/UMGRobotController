@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.percent.PercentRelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg2"
+    android:background="@drawable/img"
     tools:context="com.projects.ron.umgrobotcontroller.ControlActivity">
-<!--
+    <!--
     <ImageView
         app:layout_widthPercent="50%"
         app:layout_heightPercent="50%"
@@ -17,23 +16,27 @@
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_heightPercent="35%"
         app:layout_widthPercent="100%"
-        android:orientation="vertical"
-        tools:context=".ControlActivity">
+        tools:context=".ControlActivity"
+        android:id="@+id/linearLayoutCompat">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="monospace"
-                android:layout_marginLeft="10dp"
                 android:text="Dispositivo:"
                 android:textAlignment="center"
+                android:textColor="#FF0D90"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -56,11 +59,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="monospace"
-                android:layout_marginLeft="10dp"
                 android:text="Estado:"
                 android:textAlignment="center"
+                android:textColor="#FF0D90"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -77,61 +82,93 @@
 
 
     </android.support.v7.widget.LinearLayoutCompat>
+
     <android.support.v7.widget.LinearLayoutCompat
-        app:layout_widthPercent="100%"
         app:layout_heightPercent="100%"
-        app:layout_marginTopPercent="35%">
+        app:layout_marginTopPercent="35%"
+        app:layout_widthPercent="100%">
 
 
-
-        <android.support.percent.PercentRelativeLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
-            <Button
-                android:background="@drawable/btn1"
-                android:id="@+id/btn1"
-                android:text="A"
-                android:textColor="#fff"
-                app:layout_heightPercent="30%"
-                app:layout_marginLeftPercent="60%"
-                app:layout_marginTopPercent="35%"
-                app:layout_widthPercent="12%"
-                android:textSize="30dp"/>
-
-            <Button
-                android:id="@+id/btn2"
-                android:background="@drawable/btn2"
-                android:text="B"
-                app:layout_heightPercent="30%"
-                app:layout_marginLeftPercent="75%"
-                app:layout_marginTopPercent="35%"
-                app:layout_widthPercent="12%"
-                android:textColor="#fff"
-                android:textSize="30dp"/>
-
-
-            <io.github.controlwear.virtual.joystick.android.JoystickView
-                xmlns:custom="http://schemas.android.com/apk/res-auto"
+            <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
 
                 android:id="@+id/joystickView"
 
-                app:layout_widthPercent="100%"
                 app:layout_heightPercent="100%"
                 app:layout_marginLeftPercent="3%"
+                app:layout_widthPercent="100%"
 
-                custom:JV_buttonColor="#FF2C2C"
-                custom:JV_borderColor="#FF2C2C"
-                custom:JV_backgroundColor="#FFF46E"
+                custom:JV_backgroundColor="#e5e7e9"
+                custom:JV_borderColor="#336E7B"
                 custom:JV_borderWidth="2dp"
+                custom:JV_buttonColor="#E74C3C"
+                custom:JV_fixedCenter="false" />
+
+            <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
+
+                android:id="@+id/joystickView2"
+
+
+                app:layout_heightPercent="100%"
+                app:layout_marginLeftPercent="55%"
+                app:layout_widthPercent="100%"
+
+                custom:JV_backgroundColor="#e5e7e9"
+                custom:JV_borderColor="#336E7B"
+                custom:JV_borderWidth="2dp"
+                custom:JV_buttonColor="#229954"
                 custom:JV_fixedCenter="false" />
 
 
 
-            </android.support.percent.PercentRelativeLayout>
+        </android.support.percent.PercentRelativeLayout>
 
     </android.support.v7.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayoutCompat"
+        android:layout_marginStart="295dp"
+        android:layout_marginTop="36dp"
+        android:text="Dirección"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:text=""
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="19dp"
+        android:text="Power"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:text=""
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
 </android.support.percent.PercentRelativeLayout>
